@@ -17,17 +17,15 @@ const perguntas =[
         alternativas:["Alternativa 1", "Alternativa 2"],
     },
 ];
-
 let atual = 0;
 let perguntaAtual;
-
 function mostraPerguntas(){
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     mostraAlternativas();
 }
 function mostraAlternativas(){
-    for (const alternativas of perguntaAtual.alternativas){
+    for (const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa;
         caixaAlternativas.appendChild(botaoAlternativas);
